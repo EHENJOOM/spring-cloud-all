@@ -6,3 +6,7 @@ serial=狗b桐
 
 ###
 GET http://localhost:8001/payment/get/1
+
+
+###
+GET http://localhost:8001/payment/discovery
