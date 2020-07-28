@@ -3,3 +3,11 @@ Accept: application/json
 
 ###
 GET http://localhost:80/consumer/payment/create?serial=胡老板
+
+
+###
+GET http://localhost:80/consumer/payment/getEntity/4
+
+
+###
+GET http://localhost:80/consumer/payment/lb

@@ -67,4 +67,13 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
+    /**
+     * 手写负载均衡算法配套测试
+     * @return
+     */
+    @GetMapping("/payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
+    }
+
 }
