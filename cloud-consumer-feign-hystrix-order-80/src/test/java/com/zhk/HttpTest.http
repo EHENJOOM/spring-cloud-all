@@ -1,0 +1,4 @@
+GET http://localhost:80/consumer/hystrix/ok/1
+
+###
+GET http://localhost:80/consumer/hystrix/timeout

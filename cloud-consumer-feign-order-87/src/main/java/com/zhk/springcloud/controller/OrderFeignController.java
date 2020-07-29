@@ -28,4 +28,9 @@ public class OrderFeignController {
         return service.getPaymentById(id);
     }
 
+    @GetMapping("/consumer/feign/timeout")
+    public String paymentFeignTimeOut() {
+        // 底层使用了ribbon，默认超时1秒
+        return service.paymentFeignTimeOut();
+    }
 }
