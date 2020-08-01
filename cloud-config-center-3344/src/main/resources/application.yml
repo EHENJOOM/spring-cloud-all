@@ -1,0 +1,33 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:EHENJOOM/spring-cloud-config.git
+          search-paths:
+            - spring-cloud-config
+          username: EHENJOOM
+          password: 6541353575zhk
+      label: master
+  rabbitmq:
+    host: 101.200.49.246
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+# rabbitmq相关配置，暴露bus刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
+

@@ -1,0 +1,29 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: cloud-config-client
+  cloud:
+    config:
+      label: master
+      name: config   # 配置文件名称
+      profile: dev
+      uri: http://localhost:3344   # 配置中心的地址
+  rabbitmq:
+    host: 101.200.49.246
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+# 暴露端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

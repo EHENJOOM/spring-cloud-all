@@ -1,0 +1,13 @@
+GET http://localhost:3355/config
+
+### 手动刷新每一台机器
+POST http://localhost:3355/actuator/refresh
+
+###
+GET http://localhost:3344/config-dev.yml
+
+### 刷新3344配置中心，即可全局生效
+POST http://localhost:3344/actuator/bus-refresh
+
+### 定点通知，只通知3355，不通知3366
+POST http://localhost:3344/actuator/bus-refresh/cloud-config-client:3355

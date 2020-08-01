@@ -1,0 +1,7 @@
+GET http://localhost:9527/payment/get/1
+
+###
+GET http://localhost:9527/payment/lb?uname=test
+
+### 加入网关后，9527和8001端口都能访问
+GET http://localhost:8001/payment/get/1
