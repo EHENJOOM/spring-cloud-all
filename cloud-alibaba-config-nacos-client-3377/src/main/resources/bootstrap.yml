@@ -1,0 +1,15 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.200.49.246:8848  # 服务注册中心地址
+      config:
+        server-addr: 101.200.49.246:8848  # 配置中心地址
+        file-extension: yml
+        group: TEST_GROUP
+        namespace: ee72cdba-3c94-486b-8699-be797069443d
